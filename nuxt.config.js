@@ -42,6 +42,9 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  serverMiddleware: [
+    '~/server'
+  ],
   /*
   ** Axios module configuration
   */
