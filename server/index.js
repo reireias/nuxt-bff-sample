@@ -60,6 +60,10 @@ app.get('/auth/logout', (req, res) => {
   res.redirect('/')
 })
 
+app.get('/session', (req, res) => {
+  res.json({ user: req.user })
+})
+
 module.exports = {
   path: '/api',
   handler: app

@@ -42,6 +42,9 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  router: {
+    middleware: 'session'
+  },
   serverMiddleware: [
     '~/server'
   ],
