@@ -13,3 +13,15 @@ export const mutations = {
     state.user = null
   }
 }
+
+export const actions = {
+  nuxtServerInit({ dispatch }, { req }) {
+    return dispatch('getSession')
+  },
+  async getSession({ commit }) {
+    const session = await this.$axios.$get('/api/session')
+    if (session && session.user) {
+      commit('login', session.user)
+    }
+  }
+}
